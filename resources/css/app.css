@@ -1,0 +1,140 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Slider container styling */
+.slider {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slides container styling */
+.slides {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+/* Individual slide styling */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures button stays at the bottom */
+}
+
+/* Slide content styling */
+.slide p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.slide img {
+    border-radius: 50%;
+    margin: 20px 0;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.slide h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slide p:last-child {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Button styling */
+.slide button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto; /* Ensures button stays at the bottom */
+}
+
+.slide button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation arrows styling */
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-arrow {
+    border: none;
+    color: lightgray;
+    padding: 50px;
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 350%;
+}
+
+.nav-arrow:hover {
+    color: gray;
+}
+
+/* Navigation dots styling */
+.nav-dots {
+    position: absolute;
+    bottom: 10px; /* Adjust this value as needed to position correctly */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-dot {
+    background-color: lightgray;
+    border: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.nav-dot.active {
+    background-color: gray;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .nav-arrow {
+        display: none;
+    }
+}
